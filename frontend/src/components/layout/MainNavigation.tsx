@@ -8,6 +8,7 @@ const LINKS = {
   "/about-us": "About Us",
   "/login": "Login",
 };
+const LINKS_ENTRIES = Object.entries(LINKS);
 
 const MainNavigation = () => {
   return (
@@ -19,8 +20,8 @@ const MainNavigation = () => {
       </h1>
       <nav>
         <ul className="list-inline-unstyled">
-          {Object.entries(LINKS).map(([key, value]) => (
-            <li key={key} className="ms-5 list-inline-item">
+          {LINKS_ENTRIES.map(([key, value], index) => (
+            <li key={key} className="ms-2 list-inline-item">
               <Link
                 className="text-dark text-decoration-none"
                 style={{ fontSize: "1.5rem" }}
@@ -28,6 +29,9 @@ const MainNavigation = () => {
               >
                 {value}
               </Link>
+              {index !== LINKS_ENTRIES.length - 1 && (
+                <div className="vr ms-3" />
+              )}
             </li>
           ))}
         </ul>
