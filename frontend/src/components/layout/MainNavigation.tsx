@@ -1,12 +1,9 @@
 import { Link } from "react-router-dom";
 
 const LINKS = {
-  "/": "Expense Report",
   "/graph": "Graph",
   "/expense-list": "Expense List",
   "/contact-us": "Contact Us",
-  "/about-us": "About Us",
-  "/login": "Login",
 };
 const LINKS_ENTRIES = Object.entries(LINKS);
 
@@ -14,7 +11,7 @@ const MainNavigation = () => {
   return (
     <header className="mx-5 mt-3 d-flex align-items-center justify-content-between">
       <h1>
-        <Link className="text-dark text-decoration-none" to="/">
+        <Link className="text-dark text-decoration-none" to="/graph">
           Expense Report
         </Link>
       </h1>
