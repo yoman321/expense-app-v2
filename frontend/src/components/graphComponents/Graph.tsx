@@ -3,7 +3,7 @@ import Login from "../loginComponents/Login";
 import Backdrop from "../loginComponents/Backdrop";
 
 const Graph = () => {
-  const [showLogin, setShowLogin] = useState(true);
+  const [showLogin, setShowLogin] = useState(false);
   return (
     <div>
       {showLogin && (
