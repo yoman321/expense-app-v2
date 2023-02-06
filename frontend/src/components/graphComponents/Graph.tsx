@@ -27,7 +27,7 @@ const Graph = () => {
       },
     ],
   });
-  const [showLogin, setShowLogin] = useState(false);
+  const [showLogin, setShowLogin] = useState(true);
   return (
     <div>
       {showLogin ? (
